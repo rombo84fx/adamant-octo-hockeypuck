@@ -10,6 +10,6 @@ namespace ModuleFive
     {
         public string ProgramName { get; set; }
         public string DepartmentHead { get; set; }
-        public int MyProperty { get; set; }
+        public Degree ProgramDegree { get; set; }
     }
 }

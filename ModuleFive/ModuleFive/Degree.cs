@@ -8,6 +8,8 @@ namespace ModuleFive
 {
     class Degree
     {
-
+        public string DegreeName { get; set; }
+        public int CreditsRequired { get; set; }
+        public Course DegreeCourse { get; set; }
     }
 }
