@@ -8,15 +8,144 @@ namespace ModuleFive
 {
     class Student
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime Birthdate { get; set; }
-        public string AddressLine1 { get; set; }
-        public string AdressLine2 { get; set; }
-        public string City { get; set; }
-        public int StateProvince { get; set; }
-        public string ZipPostal { get; set; }
-        public string Country { get; set; }
-        
+        // Static class variable to track the number of students currently enrolled in a school
+        private static int studentCount = 0;
+
+        // Student fields
+        private string firstName;
+        private string lastName;
+        private DateTime birthDate;
+        private string addressLine1;
+        private string addressLine2;
+        private string city;
+        private string stateProvince;
+        private string zipPostal;
+        private string country;
+
+        // Student properties
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
+
+            set
+            {
+                firstName = value;
+            }
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+
+            set
+            {
+                lastName = value;
+            }
+        }
+
+        public DateTime BirthDate
+        {
+            get
+            {
+                return birthDate;
+            }
+
+            set
+            {
+                birthDate = value;
+            }
+        }
+
+        public string AddressLine1
+        {
+            get
+            {
+                return addressLine1;
+            }
+
+            set
+            {
+                addressLine1 = value;
+            }
+        }
+
+        public string AddressLine2
+        {
+            get
+            {
+                return addressLine2;
+            }
+
+            set
+            {
+                addressLine2 = value;
+            }
+        }
+
+        public string City
+        {
+            get
+            {
+                return city;
+            }
+
+            set
+            {
+                city = value;
+            }
+        }
+
+        public string StateProvince
+        {
+            get
+            {
+                return stateProvince;
+            }
+
+            set
+            {
+                stateProvince = value;
+            }
+        }
+
+        public string ZipPostal
+        {
+            get
+            {
+                return zipPostal;
+            }
+
+            set
+            {
+                zipPostal = value;
+            }
+        }
+
+        public string Country
+        {
+            get
+            {
+                return country;
+            }
+
+            set
+            {
+                country = value;
+            }
+        }
+
+        // Student constructor
+        public Student(string FirstName, string LastName, DateTime Birthdate)
+        {
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.BirthDate = BirthDate;
+        }
     }
 }

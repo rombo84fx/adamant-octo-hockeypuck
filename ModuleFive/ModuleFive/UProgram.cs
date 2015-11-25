@@ -8,8 +8,57 @@ namespace ModuleFive
 {
     class UProgram
     {
-        public string ProgramName { get; set; }
-        public string DepartmentHead { get; set; }
-        public Degree ProgramDegree { get; set; }
+        // UProgram fields
+        private string programName;
+        private string departmentHead;
+        private Degree programDegree;
+
+        // UProgram properties
+        public string ProgramName
+        {
+            get
+            {
+                return programName;
+            }
+
+            set
+            {
+                programName = value;
+            }
+        }
+
+        public string DepartmentHead
+        {
+            get
+            {
+                return departmentHead;
+            }
+
+            set
+            {
+                departmentHead = value;
+            }
+        }
+
+        public Degree ProgramDegree
+        {
+            get
+            {
+                return programDegree;
+            }
+
+            set
+            {
+                programDegree = value;
+            }
+        }
+
+        // UProgram constructor
+        public UProgram(string ProgramName, string DepartmentHead, Degree ProgramDegree)
+        {
+            this.ProgramName = ProgramName;
+            this.DepartmentHead = DepartmentHead;
+            this.ProgramDegree = ProgramDegree;        
+        }
     }
 }

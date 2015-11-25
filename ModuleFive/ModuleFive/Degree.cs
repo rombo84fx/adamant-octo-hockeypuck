@@ -8,8 +8,55 @@ namespace ModuleFive
 {
     class Degree
     {
-        public string DegreeName { get; set; }
-        public int CreditsRequired { get; set; }
-        public Course DegreeCourse { get; set; }
+        // Degree fields
+        private string degreeName;
+        private int creditsRequired;
+        private Course degreeCourse;
+
+        public string DegreeName
+        {
+            get
+            {
+                return degreeName;
+            }
+
+            set
+            {
+                degreeName = value;
+            }
+        }
+
+        public int CreditsRequired
+        {
+            get
+            {
+                return creditsRequired;
+            }
+
+            set
+            {
+                creditsRequired = value;
+            }
+        }
+
+        public Course DegreeCourse
+        {
+            get
+            {
+                return degreeCourse;
+            }
+
+            set
+            {
+                degreeCourse = value;
+            }
+        }
+
+        public Degree(string DegreeName, int CreditsRequired, Course DegreeCourse)
+        {
+            this.DegreeName = DegreeName;
+            this.CreditsRequired = CreditsRequired;
+            this.DegreeCourse = DegreeCourse;
+        }
     }
 }
