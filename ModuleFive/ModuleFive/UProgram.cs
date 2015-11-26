@@ -40,7 +40,7 @@ namespace ModuleFive
             }
         }
 
-        public Degree ProgramDegree
+        internal Degree ProgramDegree
         {
             get
             {

@@ -39,7 +39,7 @@ namespace ModuleFive
             }
         }
 
-        public Course DegreeCourse
+        internal Course DegreeCourse
         {
             get
             {

@@ -13,14 +13,83 @@ namespace ModuleFive
         private const int NumTeachers = 3;
 
         // Course fields
-        public string CourseName { get; set; }
-        public int Credits { get; set; }
-        public int Duration { get; set; }
-        public Student[] Students { get; set; }
-        public Teacher[] Teachers { get; set; }
+        private string courseName;
+        private int credits;
+        private int duration;
+        private Student[] students;
+        private Teacher[] teachers;
 
-        public Course()
+        // Course properties
+        public string CourseName
         {
+            get
+            {
+                return courseName;
+            }
+
+            set
+            {
+                courseName = value;
+            }
+        }
+
+        public int Credits
+        {
+            get
+            {
+                return credits;
+            }
+
+            set
+            {
+                credits = value;
+            }
+        }
+
+        public int Duration
+        {
+            get
+            {
+                return duration;
+            }
+
+            set
+            {
+                duration = value;
+            }
+        }
+
+        internal Student[] Students
+        {
+            get
+            {
+                return students;
+            }
+
+            set
+            {
+                students = value;
+            }
+        }
+
+        internal Teacher[] Teachers
+        {
+            get
+            {
+                return teachers;
+            }
+
+            set
+            {
+                teachers = value;
+            }
+        }
+
+        public Course(string CourseName, int Credits, int Duration)
+        {
+            this.CourseName = CourseName;
+            this.Credits = Credits;
+            this.Duration = Duration;
             this.Students = new Student[NumStudents];
             this.Teachers = new Teacher[NumTeachers];
         }

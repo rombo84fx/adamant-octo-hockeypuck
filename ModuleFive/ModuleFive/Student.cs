@@ -140,12 +140,21 @@ namespace ModuleFive
             }
         }
 
+        public static int StudentCount
+        {
+            get
+            {
+                return studentCount;
+            }
+        }
+
         // Student constructor
         public Student(string FirstName, string LastName, DateTime Birthdate)
         {
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.BirthDate = BirthDate;
+            studentCount++;
         }
     }
 }
