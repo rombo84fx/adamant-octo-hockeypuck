@@ -1,23 +1,20 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModuleSix
+namespace ModuleSeven
 {
     class Course
     {
-        // Constants to hold the number of students and teachers
-        private const int NumStudents = 3;
-        private const int NumTeachers = 3;
-
         // Course fields
         private string courseName;
         private int credits;
         private int duration;
-        private Student[] students;
-        private Teacher[] teachers;
+        private ArrayList students; 
+        private ArrayList teachers;
 
         // Course properties
         public string CourseName
@@ -59,7 +56,7 @@ namespace ModuleSix
             }
         }
 
-        internal Student[] Students
+        internal ArrayList Students
         {
             get
             {
@@ -72,7 +69,7 @@ namespace ModuleSix
             }
         }
 
-        internal Teacher[] Teachers
+        internal ArrayList Teachers
         {
             get
             {
@@ -90,8 +87,24 @@ namespace ModuleSix
             this.CourseName = CourseName;
             this.Credits = Credits;
             this.Duration = Duration;
-            this.Students = new Student[NumStudents];
-            this.Teachers = new Teacher[NumTeachers];
+            this.Students = new ArrayList();
+            this.Teachers = new ArrayList();
+        }
+
+        public void ListStudents()
+        {
+            // foreach loop using implicit casting
+            //foreach (Student student in this.students)
+            //{
+            //    Console.WriteLine("{0} {1}", student.FirstName, student.LastName);
+            //}
+
+            // foreach loop using explicit casting as assignment intructions indicated
+            foreach (object _object in this.students)
+            {
+                Student student = (Student)_object;
+                Console.WriteLine("{0} {1}", student.FirstName, student.LastName);
+            }
         }
     }
 }
