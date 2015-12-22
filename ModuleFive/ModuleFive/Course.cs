@@ -93,16 +93,8 @@ namespace ModuleSeven
 
         public void ListStudents()
         {
-            // foreach loop using implicit casting
-            //foreach (Student student in this.students)
-            //{
-            //    Console.WriteLine("{0} {1}", student.FirstName, student.LastName);
-            //}
-
-            // foreach loop using explicit casting as assignment intructions indicated
-            foreach (object _object in this.students)
+            foreach (Student student in this.students)
             {
-                Student student = (Student)_object;
                 Console.WriteLine("{0} {1}", student.FirstName, student.LastName);
             }
         }
