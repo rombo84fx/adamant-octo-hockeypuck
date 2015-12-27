@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModuleSeven
+namespace ModuleEight
 {
     class Course
     {
@@ -13,8 +13,8 @@ namespace ModuleSeven
         private string courseName;
         private int credits;
         private int duration;
-        private ArrayList students; 
-        private ArrayList teachers;
+        private List<Student> students; 
+        private List<Teacher> teachers;
 
         // Course properties
         public string CourseName
@@ -56,7 +56,7 @@ namespace ModuleSeven
             }
         }
 
-        internal ArrayList Students
+        internal List<Student> Students
         {
             get
             {
@@ -69,7 +69,7 @@ namespace ModuleSeven
             }
         }
 
-        internal ArrayList Teachers
+        internal List<Teacher> Teachers
         {
             get
             {
@@ -87,8 +87,8 @@ namespace ModuleSeven
             this.CourseName = CourseName;
             this.Credits = Credits;
             this.Duration = Duration;
-            this.Students = new ArrayList();
-            this.Teachers = new ArrayList();
+            this.Students = new List<Student>();
+            this.Teachers = new List<Teacher>();
         }
 
         public void ListStudents()

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModuleSeven
+namespace ModuleEight
 {
     class Student : Person
     {
@@ -13,7 +13,7 @@ namespace ModuleSeven
         private static int studentCount = 0;
 
         // Stack to hold student grades
-        private Stack grades;
+        private Stack<int> grades;
 
         public static int StudentCount
         {
@@ -23,7 +23,7 @@ namespace ModuleSeven
             }
         }
 
-        public Stack Grades
+        public Stack<int> Grades
         {
             get
             {
@@ -42,7 +42,7 @@ namespace ModuleSeven
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.BirthDate = BirthDate;
-            this.Grades = new Stack();
+            this.Grades = new Stack<int>();
             studentCount++;
         }
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModuleSeven
+namespace ModuleEight
 {
     class Program
     {
@@ -17,9 +17,9 @@ namespace ModuleSeven
             // Populate students grades with a for loop only for demostration purposes
             for (int i = 0; i < 4; i++)
             {
-                student1.Grades.Push((10- i).ToString());
-                student2.Grades.Push((10- i).ToString());
-                student3.Grades.Push((10- i).ToString());
+                student1.Grades.Push(10 - i);
+                student2.Grades.Push(10 - i);
+                student3.Grades.Push(10 - i);
             }
 
             Course course1 = new Course("Programming with C#", 40, 16);
